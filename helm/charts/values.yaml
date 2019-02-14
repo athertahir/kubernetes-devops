@@ -1,0 +1,23 @@
+replicaCount: 1
+
+frontend:
+  image:
+    name: athertahir/frontend
+    tag: latest
+    pullPolicy: Always
+  applabel: frontend
+  service:
+    type: LoadBalancer
+    port: 80
+
+backend:
+  image:
+    name: athertahir/backend
+    tag: latest
+    pullPolicy: Always
+  applabel: backend
+  service:
+    type: ClusterIP
+    port: 80
+  env:
+    Name: Ather
