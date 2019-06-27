@@ -3,6 +3,7 @@
 ### Setup(With Helm):
 Run following command inside ./helm directory
 - helm install ./charts/ -f ./charts/values.yaml -n demo
+
 Run following command to delete helm release
 - helm del --purge demo
 
